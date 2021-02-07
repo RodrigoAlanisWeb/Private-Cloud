@@ -10,6 +10,7 @@ app.use(morgan("dev"));
 app.set("port", process.env.PORT || 3000);
 
 // Routers
+app.use("/api/",require("./routes/files"));
 
 // Start the server
 app.listen(app.get("port"),() => {
